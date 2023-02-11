@@ -11,6 +11,8 @@ from .models import MenuItem, Booking
 from rest_framework.permissions import IsAuthenticated
 from django.shortcuts import get_object_or_404
 
+def index(request):
+    return render(request, 'index.html')
 
 class MenuItemsView(generics.ListCreateAPIView):
     serializer_class = MenuItemSerializer
